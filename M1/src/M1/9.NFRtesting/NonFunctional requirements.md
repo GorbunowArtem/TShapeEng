@@ -1,4 +1,15 @@
-﻿https://www.guru99.com/non-functional-testing.html
+﻿Tools for security and performance testing:
+- [BenchmarkDotnet](https://github.com/dotnet/BenchmarkDotNet)
+- [Artillery](https://artillery.io/)
+- [Bombardier](https://www.asptricks.net/2020/06/aspnet-core-performance-testing-using.html)
+- [dotnet counters](https://docs.microsoft.com/ru-ru/dotnet/core/diagnostics/dotnet-counters)
+- [security testing](https://www.3pillarglobal.com/insights/blog-posts/approaches-tools-techniques-for-security-testing/)
+- [JMEter](https://jmeter.apache.org/)
+
+Useful links:
+
+- [https://www.guru99.com/non-functional-testing.html](Guru 99)
+- [https://refactoring.guru/](Refactoring Guru)
 
 1) Security:
 The parameter defines how a system is safeguarded against deliberate and sudden attacks from internal and external sources. This is tested via Security Testing.

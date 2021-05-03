@@ -64,7 +64,7 @@ namespace M1.Tests
 						.With(f => f.DataValue, value)
 						.Create()
 				});
-
+					   
 			var messagesList = new List<MessageData>
 			{
 				_fixture.Build<MessageData>()
