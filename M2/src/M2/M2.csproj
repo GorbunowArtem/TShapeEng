@@ -5,4 +5,12 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="BenchmarkDotNet" Version="0.12.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="3.AsyncVsMultithreading" />
+    </ItemGroup>
+
 </Project>

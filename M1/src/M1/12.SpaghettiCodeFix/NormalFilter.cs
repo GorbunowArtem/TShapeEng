@@ -32,19 +32,22 @@ namespace M1._12.SpaghettiCodeFix
 		{
 			if (filterElement.Contains(LIKE))
 			{
-				messageData = messageData.Where(d => (d.GetType().GetProperty(propertyName).GetValue(d, null) as string)
-					.StartsWith(filterElement, StringComparison.OrdinalIgnoreCase));
+				messageData = messageData.Where(d => A(d, propertyName).StartsWith(filterElement, StringComparison.OrdinalIgnoreCase));
 			}
 			else if (filterElement != ALL)
 			{
-				messageData = messageData.Where(d => !string.Equals(
-					d.GetType().GetProperty(propertyName).GetValue(d, null) as string,
-					filterElement, StringComparison.OrdinalIgnoreCase));
+				messageData = messageData.Where(d => d.GetType().GetProperty(propertyName)?.GetValue(d, null) is string value
+					&& !value.StartsWith(filterElement, StringComparison.OrdinalIgnoreCase));
 			}
 
 			return messageData;
 		}
 
+		private string A(MessageData d, string propertyName)
+		{
+			return d.GetType().GetProperty(propertyName)?.GetValue(d, null) as string;
+		}
+		
 		private const string ALL = "*";
 		private const string LIKE = "%";
 
