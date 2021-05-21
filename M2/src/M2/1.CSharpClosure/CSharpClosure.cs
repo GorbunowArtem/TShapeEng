@@ -18,8 +18,6 @@ namespace M2._1.CSharpClosure
 				freeVariable += 1;
 				return toAdd + freeVariable;
 			};
-
-			return _ => 0;
 		}
 	}
 }
