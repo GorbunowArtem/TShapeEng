@@ -9,6 +9,9 @@ namespace M1._12.SpaghettiCodeFix
 {
 	public partial class Filter
 	{
+		private const string ALL = "*";
+		private const string LIKE = "%";
+
 		public async Task<IEnumerable<MessageData>> ApplyNormalFilters(
 			IEnumerable<MessageData> messageData,
 			CancellationToken cancellationToken)
@@ -43,17 +46,13 @@ namespace M1._12.SpaghettiCodeFix
 			return messageData;
 		}
 
+
 		private string A(MessageData d, string propertyName)
 		{
 			return d.GetType().GetProperty(propertyName)?.GetValue(d, null) as string;
 		}
-		
-		private const string ALL = "*";
-		private const string LIKE = "%";
 
-		private static string RemoveLikeWildcard(string filter)
-		{
-			return filter.Trim('%');
-		}
+		private static string RemoveLikeWildcard(string filter) =>
+			filter.Trim('%');
 	}
 }

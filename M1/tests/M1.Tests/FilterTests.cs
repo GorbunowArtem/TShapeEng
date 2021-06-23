@@ -62,7 +62,8 @@ namespace M1.Tests
 						.With(f => f.Element, element)
 						.With(f => f.Attribute, attribute)
 						.With(f => f.DataValue, value)
-						.Create()
+						.Create(),
+					_fixture.Create<MessageFilter>(),
 				});
 					   
 			var messagesList = new List<MessageData>

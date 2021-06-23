@@ -7,10 +7,9 @@ In C# language it is implemented via anonymous method:
     {   
         return "some value";    
     };
-    ```
-Or we can use lambda functions:
-   ```c#
-       Func<string,string> myFunc = var1 => "some value";
+    // Or we can use lambda functions:
+   
+    Func<string,string> myFunc = var1 => "some value";
    ```
 When a function is passed as an argument, it’s called a “funarg” — an abbreviation of the functional argument concept.
 
