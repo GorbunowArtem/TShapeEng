@@ -3,6 +3,7 @@ using StackExchange.Redis;
 
 namespace RedisSubscriber
 {
+	// docker run -p 6379:6379 redis
 	static class Program
 	{
 		private static void Main(string[] args)
