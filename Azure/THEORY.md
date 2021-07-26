@@ -31,11 +31,14 @@ Data that's staged for processing and eventual migration to the cool access tier
   
 - archive
     -- Optimized for storing data that is rarely accessed and stored for at least 180 days with flexible latency requirements, on the order of hours.
-  The archive access tier has the lowest storage cost but higher data retrieval costs compared to hot and cool tiers. Data must remain in the archive tier for at least 180 days or be subject to an early deletion charge. Data in the archive tier can take several hours to retrieve depending on the specified rehydration priority. For small objects, a high priority rehydrate may retrieve the object from archive in under an hour. See Rehydrate blob data from the archive tier to learn more.
+  The archive access tier has the lowest storage cost but higher data retrieval costs compared to hot and cool tiers. Data must remain in the archive tier for at least 180 days or be subject to an early deletion charge. Data in the archive tier can take several hours to retrieve depending on the specified rehydration priority. For small objects, a high priority rehydrate may retrieve the object from archive in under an hour. 
+  See Rehydrate blob data from the archive tier to learn more.
 
 While a blob is in archive storage, the blob data is offline and can't be read or modified.
 To read or download a blob in archive, you must first rehydrate it to an online tier.
-You can't take snapshots of a blob in archive storage. However, the blob metadata remains online and available, allowing you to list the blob, its properties, metadata, and blob index tags. Setting or modifying the blob metadata while in archive isn't allowed. However, you can set and modify the blob index tags. For blobs in archive, the only valid operations are Get Blob Properties, Get Blob Metadata, Set Blob Tags, Get Blob Tags, Find Blobs by Tags, List Blobs, Set Blob Tier, Copy Blob, and Delete Blob.
+You can't take snapshots of a blob in archive storage. However, the blob metadata remains online and available, allowing you to list the blob, its properties, metadata, and blob index tags.
+Setting or modifying the blob metadata while in archive isn't allowed. However, you can set and modify the blob index tags.
+For blobs in archive, the only valid operations are Get Blob Properties, Get Blob Metadata, Set Blob Tags, Get Blob Tags, Find Blobs by Tags, List Blobs, Set Blob Tier, Copy Blob, and Delete Blob.
 
 Example usage scenarios for the archive access tier include:
 
