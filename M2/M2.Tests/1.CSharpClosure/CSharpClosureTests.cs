@@ -28,5 +28,16 @@ namespace M2.Tests._1.CSharpClosure
 
 			result.Should().Be(10);
 		}
+
+		[Theory]
+		[InlineData("")]
+		[InlineData("    ")]
+		[InlineData(null)]
+		public void S(string s)
+		{
+			var result = string.IsNullOrWhiteSpace(s);
+
+			result.Should().BeTrue();
+		}
 	}
 }
